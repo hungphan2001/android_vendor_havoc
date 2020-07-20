@@ -1,14 +1,8 @@
 # Versioning System
-
-ifndef HAVOC_BUILD_TYPE
-    HAVOC_BUILD_TYPE := Unofficial
-endif
-
-# Only include Havoc OTA for official builds
-ifeq ($(filter-out Official,$(HAVOC_BUILD_TYPE)),)
+    HAVOC_BUILD_TYPE := Edition
+    
     PRODUCT_PACKAGES += \
         Updater
-endif
 
 TARGET_PRODUCT_SHORT := $(subst havoc_,,$(HAVOC_BUILD_TYPE))
 
